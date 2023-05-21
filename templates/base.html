@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block titulo %} {% endblock %}
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Página inicial</a>
+            <a href="/cursos">Cursos disponíveis</a>
+            <a href="/curso/devweb">Desenvolvimento Web</a>
+            <a href="/curso/poo">Programação Orientada a Objetos</a>
+        </nav>
+    </header>
+    <main>
+        {% block conteudo %} {% endblock %}
+    </main>
+    <footer>
+        <p>Rodapé do projeto de demonstração</p>
+    </footer>
+</body>
+
+</html>

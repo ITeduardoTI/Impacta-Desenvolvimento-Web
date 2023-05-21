@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+<title>Informações de curso</title>
+{% endblock %}
+
+{% block conteudo %}
+<h1>Bem-vindo ao curso de {{ objeto.get_nome() }}</h1>
+<p>{{ objeto.get_descricao() }}</p>
+
+<h2>Habilidades</h2>
+<ul>
+    {% for item in habilidades %}
+    <li>{{item}}</li>
+    {% endfor %}
+</ul>
+
+<p>Nível de dificuldade:
+    {% if dificuldade == 1 %}
+    <strong>Fácil</strong>
+    {% elif dificuldade == 2 %}
+    <strong>Médio</strong>
+    {%else%}
+    <strong>Dificil</strong>
+    {% endif %}
+</p>
+{% endblock %}
